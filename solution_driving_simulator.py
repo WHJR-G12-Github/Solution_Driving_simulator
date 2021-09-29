@@ -8,7 +8,7 @@ width=780
 height=360
 screen = pygame.display.set_mode((width,height))
   
-#load the images in dict
+# Creating a dictionary 'images' and loading the images into the dictionary
 images={}
 images["bg"] = pygame.image.load("bg.png").convert_alpha()
 images["car"] = pygame.image.load("car1.png").convert_alpha()
@@ -22,11 +22,11 @@ class Vehicle:
         
     def moveLeft(self):
         self.rect.y=self.rect.y-100
-        
+    # Function 'moveRight' to increment the y-coordinate of the rect by 10    
     def moveRight(self):
         self.rect.y=self.rect.y+100
         
-    
+# Creating an object for 'Vehicle' class and naming it as 'car'    
 car=Vehicle()
 
 while True:    
@@ -48,6 +48,8 @@ while True:
    
     
     screen.blit(images["bg"],[groundx,0]) 
+    
+    # Calling the 'display' function using the 'car' object
     car.display() 
     
     
